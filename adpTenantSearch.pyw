@@ -38,7 +38,7 @@ while True:
         break
 
     if event == 'Search' :
-        search_value = values['-SEARCH_VALUE-']
+        search_value = values['-SEARCH_VALUE-'].strip().replace(' ', '')
         window['tenant'].update('')
         window['client'].update('')
         window['-SEARCHRESULTS-'].update(values=[], visible=False)
